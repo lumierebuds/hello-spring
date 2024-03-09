@@ -62,11 +62,4 @@ class MemberServiceTest {
         // then
     }
 
-    @Test
-    void 전체회원조회() {
-    }
-
-    @Test
-    void 회원조회() {
-    }
 }
