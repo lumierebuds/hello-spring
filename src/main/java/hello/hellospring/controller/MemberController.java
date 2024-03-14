@@ -19,6 +19,8 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberSerbice = " + memberService.getClass());
+
     }
 
     @GetMapping("/members/new")
@@ -38,7 +40,7 @@ public class MemberController {
     @GetMapping("/members")
     public String list(Model model) {
         List<Member> members = memberService.findMembers();
-        
+
         model.addAttribute("members", members);
 
         return "members/memberList";
